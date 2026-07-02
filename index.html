@@ -1,0 +1,23 @@
+
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Grand Class Awards 2026</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(#111,#222);color:#fff;text-align:center}
+h1{color:gold}#grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:20px;max-width:1000px;margin:auto}
+.card{background:#333;border:2px solid gold;border-radius:12px;padding:20px;cursor:pointer;transition:.3s}
+.card:hover{transform:scale(1.05)}
+.hidden{display:none}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center}
+#box{background:#222;padding:30px;border:3px solid gold;border-radius:15px;max-width:500px}
+button{padding:10px 20px;font-size:16px}
+</style></head><body>
+<h1>🏆 The Grand Class Awards 2026 🎬</h1>
+<p>Click an award to reveal it!</p>
+<div id="grid"></div>
+<div id="modal"><div id="box"><h2 id="title"></h2><p id="desc"></p><button onclick="closeM()">Close</button></div></div>
+<script>
+const awards=[
+["🎥 Reel Maker","Creates amazing reels."],["😂 Comedy King/Queen","Makes everyone laugh."],["📚 Academic Icon","Outstanding academics."],["🧠 Genius Mind","Great problem solver."],["🎨 Creative Visionary","Creative talent."],["🎤 Voice of the Class","Excellent speaker/singer."],["💃 Dance Sensation","Amazing dancer."],["⚽ Sports Superstar","Athletic excellence."],["❤️ Golden Heart","Kind and caring."],["🌞 Positive Vibes","Always cheerful."],["💬 Social Butterfly","Friendly to everyone."],["👑 Fashion Icon","Stylish presence."],["🚀 Future CEO","Leadership qualities."],["💻 Tech Wizard","Technology expert."],["🎧 Playlist Pro","Music lover."],["🌟 Rising Star","Most improved."],["💎 Hidden Gem","Quiet achiever."],["🤝 Team Player","Works well with others."],["🎯 Problem Solver","Always finds solutions."],["🏆 Hall of Fame","Special recognition!"]];
+const g=document.getElementById('grid');
+awards.forEach(a=>{let d=document.createElement('div');d.className='card';d.innerHTML='🏆<br>'+a[0];d.onclick=()=>{title.textContent=a[0];desc.textContent=a[1];modal.style.display='flex';d.style.visibility='hidden';};g.appendChild(d);});
+function closeM(){modal.style.display='none';}
+</script></body></html>
